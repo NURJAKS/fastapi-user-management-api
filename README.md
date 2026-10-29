@@ -2,6 +2,7 @@
 
 > **High-concurrency RESTful microservice architected with FastAPI, PostgreSQL persistence via SQLAlchemy ORM, asynchronous Redis read-through caching with automated invalidation, Alembic schema migrations, and JWT role-based authentication.**
 
+[![CI](https://github.com/NURJAKS/fastapi-user-management-api/actions/workflows/ci.yml/badge.svg)](https://github.com/NURJAKS/fastapi-user-management-api/actions/workflows/ci.yml)
 [![Python](https://img.shields.io/badge/Python-3.10+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
 [![PostgreSQL](https://img.shields.io/badge/PostgreSQL-15-4169E1?logo=postgresql&logoColor=white)](https://www.postgresql.org/)

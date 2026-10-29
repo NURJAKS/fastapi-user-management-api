@@ -1,7 +1,9 @@
 fastapi
 uvicorn
 sqlalchemy
-psycopg2-binary
 pydantic
 alembic
-
+redis>=5.0.0
+httpx>=0.25.0
+pytest>=8.0.0
+psycopg2-binary; sys_platform != "win32"

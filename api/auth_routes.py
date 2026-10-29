@@ -19,17 +19,6 @@ from utils.rate_limit import rate_limit
 
 router = APIRouter(prefix="/auth", tags=["Auth"])
 
-@router.post("/login")
-async def login(payload: LoginSchema, db: Session = Depends(get_db)):
-
-    # 1) Rate limit по email (защита от брутфорса)
-    await rate_limit(f"login_attempts:{payload.email}", limit=5, seconds=600)
-
-    # 2) Rate limit по IP
-    client_ip = request.client.host
-    await rate_limit(f"login_ip:{client_ip}", limit=20, seconds=60)
-
-
 @router.post("/register", response_model=RegisterResponse)
 def register(payload: RegisterSchema, db: Session = Depends(get_db)):
     # Проверяем, есть ли пользователь

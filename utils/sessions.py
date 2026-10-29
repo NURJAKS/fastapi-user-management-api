@@ -1,9 +1,10 @@
+import os
 import secrets
 from datetime import datetime
 import redis.asyncio as aioredis
 
-# Redis client
-redis = aioredis.from_url("redis://localhost:6379", decode_responses=True)
+REDIS_URL = os.getenv("REDIS_URL", "redis://localhost:6379")
+redis = aioredis.from_url(REDIS_URL, decode_responses=True)
 
 SESSION_TTL = 60 * 60 * 24 * 7  # 7 дней
 
