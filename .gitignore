@@ -127,3 +127,6 @@ coverage.xml
 
 # Others
 *.pid
+
+*.sqlite
+*.db
